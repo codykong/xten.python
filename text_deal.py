@@ -1,16 +1,14 @@
 import os
 print(os.getcwd())
-os.chdir("D:")
+os.chdir('document/')
 print(os.getcwd())
-data=open("words.txt")
-print(data.readline(),end='')
-print(data.readline(),end='')
-print(data.readline(),end='')
-print(data.readline(),end='')
+data=open("talk.txt")
 
-data.seek(0)
 for each_line in data:
-    print(each_line,end='')
+    (man,line)=each_line.split(':')
+    print(man,end='')
+    print(' said ',end='')
+    print(line,end='')
 
 data.close()
          
